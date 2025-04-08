@@ -47,7 +47,7 @@ body{
     border-radius: 5px 0px 0px 5px;
     border:1px solid gray;
     outline:none;
-
+    width: 50vw;
 }
 
 button{
@@ -94,7 +94,12 @@ button:hover {
     padding: 2em; 
     
 }
+@media (max-width:767px){
+    #weatherp {
+        display: none;
+    }
 
+}
 
 .WorldWeather{
     grid-area: main2;

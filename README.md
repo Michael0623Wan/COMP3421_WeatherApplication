@@ -1,4 +1,5 @@
 # Project Name:  Weather Application Using Web APIs
+# Visit the site: https://michael0623wan.github.io/COMP3421_WeatherApplication/
 # develop in Visual Studio Code 
 # Description:  Dynamically display Hong Kong weather data in a user-friendly format. The user also can enter the name of city in the search bar to search to weather in different cities.  A weather application that fetches real-time weather information from a public API: HK Observatory or OpenWeatherMap and displays it on a web page. 
 

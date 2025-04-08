@@ -3,7 +3,7 @@ function fetchHKWeather() {
 
     const urlCurrent = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en';
     const url9day = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en';
-    const weatherInfo = document.getElementById('weatherInfoHK');  
+    const weatherInfo = document.getElementById('weatherInfo');  
       weatherInfo.innerHTML = '<p>Loading...</p>';
       Promise.all([
           fetch(urlCurrent),
@@ -49,7 +49,7 @@ function fetchHKWeather() {
                     <img style="height:100px;width:100px;" src="${iconurl}">
                     <p><strong>${forecastDate.slice(0,4)+"/"+forecastDate.slice(4,6)+"/"+forecastDate.slice(6,8)}</strong></p>
                     <p><strong> ${minTemp} / ${maxTemp} °C</strong></p>
-                    <p> ${weather}</p>
+                    <p id='weatherp'> ${weather}</p>
                     </div>
                 `;
 
