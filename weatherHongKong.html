@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>HK Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5378e400b8.js" crossorigin="anonymous"></script>
+    <script src="HKWeather.js"></script>
+    <script src="worldWeather.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTXJZPJZ9Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QTXJZPJZ9Z');
+
+        window.onload = function() {
+        // Perform your loading activities
+            const timeStart = performance.now();
+            fetchHKWeather(); // Example of a function that loads data
+            const timeEnd = performance.now(); 
+            const loadingTime = timeEnd - timeStart; 
+
+            // Send loading time to Google Analytics as a custom event
+            gtag('event', 'loading_time', {
+                'event_category': 'Performance',
+                'event_label': 'Load Time',
+                'value': Math.round(loadingTime), // Value in milliseconds
+            });     
+            
+        };
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title">
+            <a href="#" onclick="trackPageView('Home')"><i class="fa-solid fa-earth-americas"></i>Weather App</a>
+        </div>
+        <div class="search_bar">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </nav>
+
+    <div class="HKWeather">
+        <div class="weatherInforHK" id="weatherInfoHK">
+        <p>Loading weather data...</p>
+        </div>
+        
+    </div>
+
+    
+
+    <div class="WorldWeather" id="weatherResult">
+    </div>
+
+
+</body>
+</html>
