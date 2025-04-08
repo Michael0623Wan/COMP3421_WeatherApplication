@@ -14,7 +14,7 @@ https://api.worldweatheronline.com/premium/v1/weather.ashx?key=${apikey}&q=${cit
  - Recommend to run in Visual Studio Code
 ## Running the Project
  - You can just copy the code into your working environment 
- - OR click the weatherHongKong.html
+ - OR click the index.html
  - You should see the dynamic Hong Kong current weather and 7-day forecast weather
  - Recommend to use your own api key for fetching the information from OpenWeatherMap API
 ## Testing 
